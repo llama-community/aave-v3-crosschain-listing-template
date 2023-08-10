@@ -57,3 +57,7 @@ caps-pk :;  make deploy-pk contract=script/DeployArbitrumPayload.s.sol:ExampleAr
 caps-ledger :;  make deploy-ledger contract=script/DeployAvalanchePayload.s.sol:ExampleAvalanchePayload chain=arbitrum
 caps-pk :;  make deploy-pk contract=script/DeployAvalanchePayload.s.sol:ExampleAvalanchePayload chain=arbitrum
 # ################ EXAMPLE END #############
+
+deploy-bridge-mainnet :; forge script src/AaveV3_Eth_AssetsBridge_20230808/AaveV3_Eth_AssetsBridge_20230808.s.sol:DeployEthereum --rpc-url mainnet --broadcast --private-key ${PRIVATE_KEY} --verify --etherscan-api-key ${ETHERSCAN_API_KEY} -vvvv
+deploy-bridge-polygon :; forge script src/AaveV3_Eth_AssetsBridge_20230808/AaveV3_Eth_AssetsBridge_20230808.s.sol:DeployPolygon --rpc-url polygon --broadcast --private-key ${PRIVATE_KEY} --verify --etherscan-api-key ${ETHERSCAN_API_KEY_POLYGON} -vvvv
+
